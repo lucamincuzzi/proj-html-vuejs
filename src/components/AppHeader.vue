@@ -41,7 +41,7 @@ export default {
             <button class="btn btn-lg px-4 mt-4">Explore our products</button>
         </div>
         <div class="square">
-            <i class="fa-solid fa-person-chalkboard"></i>
+            <i class="fa-solid fa-xl fa-person-chalkboard"></i>
             <span>Demos</span>
         </div>
         <div class="square-1">
@@ -187,6 +187,7 @@ header {
 
         span.sale-price {
             font-size: 1.4rem;
+            font-weight: bold;
             color: green;
         }
     }

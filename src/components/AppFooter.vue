@@ -3,6 +3,7 @@ export default {
     data() {
         return {
             navLinks: ["Shop", "About", "Gallery", "Locations", "Journal", "Contact", "Orders",],
+            socials: ["fa-instagram", "fa-twitter", "fa-facebook-f", "fa-pinterest",],
         };
     },
 }
@@ -26,27 +27,49 @@ export default {
         <!-- /Footer top -->
         <!-- Footer bottom -->
         <div class="footer-bottom mt-5">
-            <div class="footer-container d-flex justify-content-between align-items-center">
-                <div class="logo-links">
-                    <!-- Logo -->
-                    <img src="../assets/images/avada-bakery-logo-retina-200x97.png" alt="">
-                    <!-- /Logo -->
-                    <!-- Link -->
-                    <ul class="d-flex gap-4 mt-4">
-                        <li v-for="link in navLinks">
-                            <a>{{ link }}</a>
+            <div class="footer-container">
+                <!-- Parte superiore -->
+                <div class="upper-side d-flex justify-content-between align-items-center">
+                    <div class="logo-links">
+                        <!-- Logo -->
+                        <img src="../assets/images/avada-bakery-logo-retina-200x97.png" alt="">
+                        <!-- /Logo -->
+                        <!-- Link -->
+                        <ul class="d-flex gap-4 mt-4">
+                            <li v-for="link in navLinks">
+                                <a>{{ link }}</a>
+                            </li>
+                        </ul>
+                        <!-- /Link -->
+                    </div>
+                    <!-- Form -->
+                    <div class="form w-45">
+                        <h3 class="cta-form-text mb-5">Subscribe to our Newsletter</h3>
+                        <div class="input-group mb-3">
+                            <input style="height: 50px" type="text" class="form-control me-4"
+                                placeholder="Enter email address*" aria-label="Recipient's username"
+                                aria-describedby="basic-addon2">
+                            <button class="btn btn-large px-4">Subscribe</button>
+                        </div>
+                    </div>
+                    <!-- /Form -->
+                </div>
+                <!-- /Parte superiore -->
+                <!-- Parte inferiore -->
+                <div class="lower-side mt-5 d-flex justify-content-between align-items-center">
+                    <!-- /Credits -->
+                    <span class="credits"> &copy;Copyright 2012 - 2020 | Avada Theme by ThemeFusion | All Rights Reserved |
+                        Powered by Wordpress</span>
+                    <!-- /Credits -->
+                    <!-- Social -->
+                    <ul class="d-flex gap-5">
+                        <li v-for="social in socials">
+                            <a><i class="fa-brands fa-lg" :class="social"></i></a>
                         </li>
                     </ul>
-                    <!-- /Link -->
+                    <!-- /Social -->
                 </div>
-                <div class="form w-45">
-                    <h3 class="cta-form-text mb-5">Subscribe to our Newsletter</h3>
-                    <div class="input-group mb-3">
-                        <input style="height: 50px" type="text" class="form-control me-4" placeholder="Enter email address*"
-                            aria-label="Recipient's username" aria-describedby="basic-addon2">
-                        <button class="btn btn-large px-4">Subscribe</button>
-                    </div>
-                </div>
+                <!-- /Parte inferiore -->
             </div>
         </div>
         <!-- /Footer bottom -->
@@ -100,16 +123,6 @@ footer {
         width: 90%;
         margin: 0 auto;
 
-        img {
-            position: relative;
-            left: 25px;
-        }
-
-        li,
-        i {
-            cursor: pointer;
-        }
-
         ul {
             list-style-type: none;
             color: $font-main-color;
@@ -119,25 +132,45 @@ footer {
             }
         }
 
-        .form {
+        .upper-side {
 
-            h3.cta-form-text {
-                text-align: end;
-                font-family: "", serif;
-                font-weight: bold;
-                color: $font-main-color;
+            img {
+                position: relative;
+                left: 25px;
             }
 
-            button {
-                font-size: 0.8rem;
-                background-color: $font-main-color;
-                color: #ffff;
-                border-radius: 10px !important;
+            li,
+            i {
+                cursor: pointer;
+            }
 
-                &:hover {
-                    background-color: $btn-hover-bg-color;
+            .form {
+
+                h3.cta-form-text {
+                    text-align: end;
+                    font-family: "", serif;
+                    font-weight: bold;
                     color: $font-main-color;
                 }
+
+                button {
+                    font-size: 0.8rem;
+                    background-color: $font-main-color;
+                    color: #ffff;
+                    border-radius: 10px !important;
+
+                    &:hover {
+                        background-color: $btn-hover-bg-color;
+                        color: $font-main-color;
+                    }
+                }
+            }
+        }
+
+        .lower-side {
+            span.credits {
+                font-size: 0.8rem;
+                opacity: 0.7;
             }
         }
     }
