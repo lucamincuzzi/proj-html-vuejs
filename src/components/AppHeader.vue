@@ -60,7 +60,9 @@ export default {
 @use "../style/partials/variables" as *;
 
 header {
+    width: 100%;
     background-color: $main-bg-color;
+    position: fixed;
     z-index: 999;
 
     div {
@@ -156,7 +158,8 @@ header {
         box-shadow: 5px 5px 5px lightgray;
         width: 70px;
         height: 70px;
-        position: absolute;
+        position: fixed;
+        z-index: 999;
         right: 10px;
         background-color: white;
         cursor: pointer;
@@ -167,11 +170,10 @@ header {
     }
 
     .square {
-        margin-bottom: 10px;
+        top: 120px;
     }
-
     .square-1 {
-        top: 80px;
+        top: 220px;
 
         .dollar {
             position: absolute;
