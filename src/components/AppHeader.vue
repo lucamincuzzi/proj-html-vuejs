@@ -6,6 +6,11 @@ export default {
             heroSquares: ["Demos", "On Sale"],
         }
     },
+    methods: {
+        topFunction() {
+            document.documentElement.scrollTop = 0;
+        }
+    },
 }
 </script>
 
@@ -51,6 +56,7 @@ export default {
             </div>
             <span>On Sale</span>
         </div>
+        <div class="square-2" @click="topFunction()">&uparrow;</div>
     </div>
     <!-- /Highlight -->
     <!-- /Hero -->
@@ -149,7 +155,8 @@ header {
     }
 
     .square,
-    .square-1 {
+    .square-1,
+    .square-2 {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -190,5 +197,10 @@ header {
             font-weight: bold;
             color: green;
         }
+    }
+    .square-2 {
+        top: 900px;
+        background-color: gray;
+        color: white;
     }
 }</style>
