@@ -11,17 +11,17 @@ export default {
                 },
                 {
                     photo: "strawberry-jam-cookies-400x510.jpg",
-                    name: "Choco Chip Cookies",
+                    name: "Stawberry Jam Cookies",
                     price: "$24.00 - $62.00",
                 },
                 {
                     photo: "strawberry-donut-400x510.jpg",
-                    name: "Choco Chip Cookies",
+                    name: "Strawberry Donut",
                     price: "$24.00 - $42.00",
                 },
                 {
                     photo: "perfect-macarons-400x510.jpg",
-                    name: "Choco Chip Cookies",
+                    name: "Perfect Macarons",
                     price: "$18.00 - $52.00",
                 }
             ],
@@ -111,6 +111,75 @@ export default {
             </div>
         </section>
         <!-- /Ad hoc products -->
+
+        <!-- Bakery process -->
+        <section id="bakeryProcess">
+            <div class="wrapper d-flex flex-column gap-5">
+                <!-- Step uno -->
+                <div class="step step-one step-lg">
+                    <div class="step-info d-flex flex-column justify-content-between">
+                        <div class="step-head d-flex justify-content-between align-items-center">
+                            <h2>Tell us what you have in mind</h2>
+                            <div class="step-number">01</div>
+                        </div>
+                        <div class="step-description w-50 align-self-end text-start">
+                            <div class="subtitle text-start mb-3"><span>MANUAL INGREDIENTS SELECTION</span></div>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem dolorum nesciunt
+                                voluptas ex culpa autem. Necessitatibus ipsum quod ea aliquam doloremque, deleniti soluta
+                                perferendis assumenda eum ad ullam numquam cupiditate.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Step uno -->
+                <!-- Step due -->
+                <div class="step step-two d-flex gap-3">
+                    <div class="step step-m w-50">
+                        <div class="step-info d-flex flex-column justify-content-between">
+                            <div class="step-head d-flex justify-content-between align-items-center">
+                                <h2>We Start Baking</h2>
+                                <div class="step-number">02</div>
+                            </div>
+                            <div class="step-description w-50 align-self-start text-start">
+                                <div class="subtitle text-start mb-3"><span>SWEET & DELICIOUS</span></div>
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem dolorum nesciunt
+                                    voluptas ex culpa autem. Necessitatibus ipsum quod ea aliquam doloremque, deleniti
+                                    soluta
+                                    perferendis assumenda eum ad ullam numquam cupiditate.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="quote w-50">
+                        <div class="quote-container">
+                            <span class="small-text">
+                                DON'T JUST TAKE OUR WORD FOR IT
+                            </span>
+                            <p>"Finally found an alternative to the mass produced products.
+                                Something that incorporates real organic ingredients, nutrient dense wellness while
+                                promoting sustainability and activity."</p>
+                            <span class="small-text quoted">Rachel Cooper, Founder</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Step due -->
+                <!-- Step tre -->
+                <div class="step step-three step-lg">
+                    <div class="step-info d-flex flex-column justify-content-between">
+                        <div class="step-head d-flex justify-content-between align-items-center">
+                            <h2>Delivered to your home</h2>
+                            <div class="step-number">03</div>
+                        </div>
+                        <div class="step-description w-50 align-self-start text-start">
+                            <div class="subtitle text-start mb-3"><span>BAKED TO ORDER & GIFT WRAPPED</span></div>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem dolorum nesciunt
+                                voluptas ex culpa autem. Necessitatibus ipsum quod ea aliquam doloremque, deleniti soluta
+                                perferendis assumenda eum ad ullam numquam cupiditate.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Step tre -->
+            </div>
+        </section>
+        <!-- /Bakery process -->
     </main>
 </template>
 
@@ -201,6 +270,7 @@ main {
             img {
                 height: 400px;
             }
+
             .product-description {
                 text-align: center;
                 color: $font-main-color;
@@ -211,6 +281,90 @@ main {
                     font-weight: bold;
                 }
             }
+        }
+    }
+
+    #bakeryProcess {
+
+
+        .step,
+        .step-m,
+        .quote {
+            position: relative;
+            height: 1000px;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .step-info {
+            width: 85%;
+            height: 80%;
+            margin: 50px auto;
+
+            .step-head {
+                h2 {
+                    font-family: "", serif;
+                    font-size: 4rem;
+                    font-weight: bold;
+                    color: white;
+                }
+
+                .step-number {
+                    font-size: 100px;
+                    font-weight: 200;
+                    letter-spacing: 5px;
+                    color: white;
+                }
+            }
+
+            .step-description {
+                color: white;
+
+                .subtitle {
+                    opacity: 0.7;
+                }
+            }
+        }
+
+        .step-one {
+            background: linear-gradient(rgba(0, 0, 0, 0.2),
+                    rgba(0, 0, 0, 0.5)), url(../assets/images/bakery-process-1.jpg);
+        }
+
+        .step-two .step-m {
+            background: linear-gradient(rgba(0, 0, 0, 0.2),
+                    rgba(0, 0, 0, 0.5)), url(../assets/images/bakery-process-2.jpg);
+        }
+
+        .step-two {
+            .quote {
+                background-color: $main-bg-color;
+
+                .quote-container {
+                    width: 85%;
+                    margin: 150px auto;
+
+                    
+                .small-text {
+                    font-size: 0.8rem;
+                    opacity: 0.7;
+                }
+
+                p {
+                    font-size: 3.5rem;
+                    font-family: "", serif;
+                    font-weight: bold;
+                    letter-spacing: -1px;
+                    color: $font-main-color;
+                }
+                }
+
+            }
+        }
+
+        .step-three {
+            background: linear-gradient(rgba(0, 0, 0, 0.2),
+                    rgba(0, 0, 0, 0.5)), url(../assets/images/bakery-process-3.jpg);
         }
     }
 }
