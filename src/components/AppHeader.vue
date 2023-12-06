@@ -33,7 +33,7 @@ export default {
     <!-- Highlight -->
     <div class="hero d-flex justify-content-start">
         <div class="hero-content">
-            <span>FRESHY & TASTY BAKERY EVERY DAY</span>
+            <span>FRESH & TASTY BAKERY EVERY DAY</span>
             <h2 class="mt-3">The Perfect Fresh Bread</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo corporis excepturi minima, illo vel suscipit
                 soluta pariatur animi nulla eveniet quis rem dignissimos laboriosam? Quidem eaque corrupti porro alias
@@ -61,6 +61,7 @@ export default {
 
 header {
     background-color: $main-bg-color;
+    z-index: 999;
 
     div {
         width: 95%;
@@ -111,6 +112,7 @@ header {
     background-position: center;
     background-size: cover;
     position: relative;
+    margin-bottom: 200px;
 
     .hero-content {
         width: 25%;
@@ -157,6 +159,7 @@ header {
         position: absolute;
         right: 10px;
         background-color: white;
+        cursor: pointer;
 
         span {
             font-size: 0.8rem;
